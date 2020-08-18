@@ -2,11 +2,16 @@ import React from 'react';
 // import ReactDOM from 'react-dom'; 
 import { Layout, Menu, Breadcrumb } from 'antd';
 import {
-  // DesktopOutlined,
-  PieChartOutlined,
-  // FileOutlined,
-  TeamOutlined,
-  UserOutlined,
+  HomeOutlined,// 主页
+  FolderOpenOutlined, // 稿件
+  BellOutlined, // 消息提醒
+  FileDoneOutlined, //任务
+  FolderOutlined, // 素材
+  SolutionOutlined, // 稿件审核
+  TeamOutlined, //人员
+  VerifiedOutlined, // 认证审核
+  IdcardOutlined, // 权限认证
+  SettingOutlined //设置图标
 } from '@ant-design/icons';
 // import CardList from "./components/CardList";
 import HomePage from "./HomePage";
@@ -128,44 +133,44 @@ class SiderDemo extends React.Component {
               <div>全媒体工作台</div>
             </div>
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-              <Menu.Item key="1" icon={<PieChartOutlined />} onClick={this.redirectContent}>
+              <Menu.Item key="1" icon={<HomeOutlined />} onClick={this.redirectContent}>
                 主页
               </Menu.Item>
-              <SubMenu key="sub1" icon={<TeamOutlined />} title="稿件">
+              <SubMenu key="sub1" icon={<FolderOpenOutlined />} title="稿件">
                 <Menu.Item key="2" onClick={this.redirectContent}>已发布</Menu.Item>
                 <Menu.Item key="3" onClick={this.redirectContent}>未通过</Menu.Item>
                 <Menu.Item key="4" onClick={this.redirectContent}>已保存</Menu.Item>
               </SubMenu>
-              <Menu.Item key="5" icon={<PieChartOutlined />} onClick={this.redirectContent}>
+              <Menu.Item key="5" icon={<TeamOutlined />} onClick={this.redirectContent}>
                 人员
               </Menu.Item>
-              <Menu.Item key="6" icon={<PieChartOutlined />} onClick={this.redirectContent}>
+              <Menu.Item key="6" icon={<SolutionOutlined />} onClick={this.redirectContent}>
                 稿件审核
               </Menu.Item>
-              <SubMenu key="sub2" icon={<UserOutlined />} title="任务">
+              <SubMenu key="sub2" icon={<FileDoneOutlined />} title="任务">
                 <Menu.Item key="7" onClick={this.redirectContent} >已完成</Menu.Item>
                 <Menu.Item key="8" onClick={this.redirectContent} >未完成</Menu.Item>
               </SubMenu>
-              <SubMenu key="sub3" icon={<TeamOutlined />} title="素材">
+              <SubMenu key="sub3" icon={<FolderOutlined />} title="素材">
                 <Menu.Item key="9" onClick={this.redirectContent}>图片</Menu.Item>
                 <Menu.Item key="10" onClick={this.redirectContent}>视频</Menu.Item>
                 <Menu.Item key="11" onClick={this.redirectContent}>音频</Menu.Item>
               </SubMenu>
-              <SubMenu key="sub4" icon={<UserOutlined />} title="消息提醒">
+              <SubMenu key="sub4" icon={<BellOutlined />} title="消息提醒">
                 <Menu.Item key="12" onClick={this.redirectContent}>已完成</Menu.Item>
                 <Menu.Item key="13" onClick={this.redirectContent}>未完成</Menu.Item>
                 
               </SubMenu>
-              <SubMenu key="sub5" icon={<TeamOutlined />} title="权限认证">
+              <SubMenu key="sub5" icon={<IdcardOutlined />} title="权限认证">
                 <Menu.Item key="14" onClick={this.redirectContent}>个人认证</Menu.Item>
                 <Menu.Item key="15" onClick={this.redirectContent}>企业认证</Menu.Item>
                 <Menu.Item key="16" onClick={this.redirectContent}>媒体认证</Menu.Item>
               </SubMenu>
-              <SubMenu key="sub6" icon={<TeamOutlined />} title="认证审核">
+              <SubMenu key="sub6" icon={<VerifiedOutlined />} title="认证审核">
                 <Menu.Item key="17" onClick={this.redirectContent}>已完成</Menu.Item>
                 <Menu.Item key="18" onClick={this.redirectContent}>未完成</Menu.Item>
               </SubMenu>
-              <Menu.Item key="19" icon={<PieChartOutlined />} onClick={this.redirectContent}>
+              <Menu.Item key="19" icon={<SettingOutlined />} onClick={this.redirectContent}>
                 设置
               </Menu.Item>
             </Menu>
