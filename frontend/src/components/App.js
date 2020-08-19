@@ -13,6 +13,9 @@ import {
   IdcardOutlined, // 权限认证
   SettingOutlined //设置图标
 } from '@ant-design/icons';
+import { Avatar } from 'antd';
+import { UserOutlined } from '@ant-design/icons';
+
 // import CardList from "./components/CardList";
 import HomePage from "./HomePage";
 import ScriptPub from "./ScriptPub";
@@ -176,7 +179,13 @@ class SiderDemo extends React.Component {
             </Menu>
           </Sider>
           <Layout className="site-layout">
-            <Header className="site-layout-background" style={{ padding: 0 }} />
+            <Header className="site-layout-background" style={{ padding: 0 }}>
+              {/* 头像 */}
+              <div className="headImgSpan">
+                <Avatar size="60" icon={<UserOutlined />} />
+                <span>Admin</span>
+              </div>
+            </Header>
             <Content style={{ margin: '0 16px' }}>
               <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item ><span ref="firstDir">主页</span></Breadcrumb.Item>
